@@ -68,11 +68,11 @@ def generate(env, **kw):
         env['SHLINKCOMSTR'] =   '%sLinking (shared)······· %s$TARGET%s' % linking
 
         env['INSTALLSTR'] =     "%s.----Install--- %s$SOURCE\n" \
-                                "%s'-------------> %s$TARGET%s" % install
+                                "%s'-------------> %s$CONFIG_DEVICE_NAME%s" % install
 
         env['STRIPCOMSTR'] =    '%sStripping······ %s$TARGET%s' % linking
 
-        env['SIZECOMSTR'] =     '%sSize after:%s%s'  % default
+        env['SIZECOMSTR'] =     '%sMemory usage··· %s$CONFIG_DEVICE_NAME%s' % default
         env['HEXCOMSTR'] =      '%sIntel-Hex File· %s$TARGET%s' % default
         env['BINCOMSTR'] =      '%sBinary File···· %s$TARGET%s' % default
         env['LSSCOMSTR'] =      '%sExt. Listing··· %s$TARGET%s' % default
