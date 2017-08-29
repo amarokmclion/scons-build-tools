@@ -34,12 +34,13 @@ def generate(env, **kw):
         '-fshort-wchar',        # Required when using newlib.nano
         ])
 
-    env.SetDefault(CXXFLAGS_optimize=[
-        "-fno-exceptions",
-        "-fno-rtti",
-        "-fno-threadsafe-statics",
-        "-fuse-cxa-atexit",
-        ])
+    env.SetDefault(CXXFLAGS_other=[
+        '-fno-threadsafe-statics',
+        '-fuse-cxa-atexit',])
+    env.SetDefault(CXXFLAGS_language=[
+        '-std=c++14',
+        '-fno-exceptions',
+        '-fno-rtti',])
 
     env.SetDefault(LINKFLAGS_target=[])
     env.SetDefault(LINKFLAGS_optimize=[
